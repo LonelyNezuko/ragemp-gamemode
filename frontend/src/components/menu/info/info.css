@@ -1,0 +1,158 @@
+.menu-info,
+.menu-info .menu-info-root {
+	width: 100%;
+	height: 100%;
+}
+
+
+.menu-info .menu-info-level {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.menu-info .menu-info-level div:first-child {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-top: 10px;
+}
+.menu-info .menu-info-level div:first-child svg {
+	position: absolute;
+
+	top: calc(50% + 5px);
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	font-size: 37px;
+
+	opacity: .5;
+	color: #24ae7f;
+}
+.menu-info .menu-info-level div:first-child h2 {
+	position: relative;
+	z-index: 5;
+
+	font-family: 'Druk Cyr';
+	font-size: 23px;
+}
+.menu-info .menu-info-level div:last-child {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 15px;
+
+	background-color: #2eb7cd50;
+	padding: 3px 2px;
+
+	border-radius: 4px;
+	width: 100%;
+
+	font-size: 12px;
+}
+
+
+/* Account */
+.menu-info .menu-info-root-account {
+	
+}
+
+.menu-info .menu-info-root-account .menu-info-root-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	width: 100%;
+	margin-bottom: 20px;
+}
+.menu-info .menu-info-root-account .menu-info-root-header section:first-child h1 {
+	font-size: 42px;
+	font-family: 'Akrobat';
+
+	margin-right: 30px;
+}
+.menu-info .menu-info-root-account .menu-info-root-header section:first-child h2 {
+	font-size: 12px;
+	opacity: .7;
+}
+
+.menu-info .menu-info-root-account .menu-info-root-account-elem + .menu-info-root-account-elem {
+	margin-top: 45px;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-elem .menu-info-root-account-elem-title {
+	font-size: 23px;
+	font-family: 'Akrobat';
+
+	text-align: center;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-elem-box {
+	background-color: #2eb7cd50;
+	padding: 15px;
+
+	border-radius: 8px;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-elem-box .menu-info-root-account-elem-title {
+	text-align: left;
+	font-size: 18px;
+}
+
+.menu-info .menu-info-root-account .menu-info-root-account-data {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 100%;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem {
+	background-color: #2eb7cd50;
+	padding: 12px;
+
+	border-radius: 6px;
+	width: calc(250px - 24px);
+
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem h1 {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+
+	position: relative;
+	z-index: 2;
+
+	transform: translateY(-2px);
+	color: #ffffff73;
+
+	font-size: 12px;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem h1 span,
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem h1 {
+	text-align: right;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem h1 span {
+	width: 100%;
+	color: white;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem .menu-info-root-account-data-elem-svg {
+	min-width: 35px;
+	width: 35px;
+	height: 35px;
+
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-info .menu-info-root-account .menu-info-root-account-data .menu-info-root-account-data-elem .menu-info-root-account-data-elem-svg svg {
+	font-size: 25px;
+	color: #ffffff73;
+}

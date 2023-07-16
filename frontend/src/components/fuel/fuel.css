@@ -1,0 +1,425 @@
+.fuel {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: calc(100% - 40%);
+	height: calc(100% - 62px);
+
+	background: radial-gradient(50% 50% at 50% 50%, #2a3842 0%, #162a34db 100%);
+	color: white;
+
+	padding: 31px 20%;
+}
+
+
+.fuel .fuel-liquid {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+	overflow: hidden;
+
+	transform: rotate(180deg);
+}
+.fuel .fuel-liquid::before {
+	content: "";
+	position: absolute;
+
+	width: 180%;
+	height: 200%;
+
+	background-color: #ececec;
+
+	top: -150%;
+	left: -40%;
+
+	border-radius: 40%;
+	animation: fuelLiquidAnim 12s linear infinite;
+
+	animation-play-state: paused;
+}
+.fuel .fuel-liquid::after {
+	content: "";
+	position: absolute;
+
+	width: 184%;
+	height: 204%;
+
+	background-color: #ececec80;
+
+	top: -150%;
+	left: -42%;
+
+	border-radius: 40%;
+
+	animation: fuelLiquidAnim 12s linear infinite;
+	animation-delay: 0.5s;
+
+	animation-play-state: paused;
+}
+@keyframes fuelLiquidAnim {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.fuel .fuel-liquid-playing::before,
+.fuel .fuel-liquid-playing::after {
+	animation-play-state: running;
+}
+
+.fuel .fuel-liquid-diesel:before {
+	background-color: #000000;
+}
+.fuel .fuel-liquid-diesel:after {
+	background-color: #00000060;
+}
+
+.fuel .fuel-liquid-ai98:before {
+	background-color: #5e1c1c;
+}
+.fuel .fuel-liquid-ai98:after {
+	background-color: #5e1c1c80;
+}
+
+.fuel .fuel-liquid-ai95:before {
+	background-color: #121264;
+}
+.fuel .fuel-liquid-ai95:after {
+	background-color: #12126480;
+}
+
+.fuel .fuel-liquid-ai92:before {
+	background-color: #156615;
+}
+.fuel .fuel-liquid-ai92:after {
+	background-color: #15661580;
+}
+
+.fuel .fuel-liquid-ai100:before {
+	background-color: #852185;
+}
+.fuel .fuel-liquid-ai100:after {
+	background-color: #85218580;
+}
+
+.fuel .fuel-liquid-b92:before {
+	background-color: #808080;
+}
+.fuel .fuel-liquid-b92:after {
+	background-color: #80808080;
+}
+
+.fuel .fuel-liquid-b91:before {
+	background-color: #ffffff;
+}
+.fuel .fuel-liquid-b91:after {
+	background-color: #ffffff80;
+}
+
+
+.fuel .fuel-type {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 900px;
+	margin: 0 auto;
+}
+.fuel .fuel-type .fuel-type-elem {
+	background-color: #24404e;
+	padding: 15px;
+
+	border-radius: 10px;
+	width: 130px;
+	min-width: 130px;
+}
+.fuel .fuel-type .fuel-type-elem h1 {
+	font-family: 'Rage';
+	font-size: 40px;
+	line-height: 40px;
+}
+.fuel .fuel-type .fuel-type-elem .fuel-type-preview {
+	width: calc(100% - 4px);
+	height: calc(100px - 4px);
+
+	border-radius: 15px;
+
+	background-color: #283f4a;
+	border: 2px solid #2f4f5e;
+
+	overflow: hidden;
+}
+.fuel .fuel-type .fuel-type-elem section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-top: 10px;
+}
+.fuel .fuel-type .fuel-type-elem section h2 {
+	display: flex;
+	align-items: center;
+
+	color: #65a4c3;
+}
+.fuel .fuel-type .fuel-type-elem section h2 span {
+	font-size: 11px;
+	opacity: .7;
+
+	color: white;
+	margin-left: 4px;
+}
+.fuel .fuel-type .fuel-type-elem section input {
+	border-color: #9dddfd;
+}
+.fuel .fuel-type .fuel-type-elem section input:before {
+	background-color: #9dddfd;
+}
+
+.fuel .fuel-type .fuel-type-elem:hover .fuel-type-preview .fuel-liquid:before,
+.fuel .fuel-type .fuel-type-elem:hover .fuel-type-preview .fuel-liquid:after {
+	animation-play-state: running;
+}
+
+
+.fuel .fuel-body {
+	display: flex;
+	justify-content: space-between;
+
+	width: 900px;
+	height: calc(100% - 200px - 30px);
+
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+
+.fuel .fuel-body .fuel-body-fill {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-coub {
+	width: 250px;
+	height: 100%;
+
+	overflow: hidden;
+
+	background-color: #283f4a;
+	border: 2px solid #2f4f5e;
+
+	border-radius: 30px 0 0 30px;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-coub .fuel-liquid:before {
+	width: 500%;
+	left: -140%;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-coub .fuel-liquid:after {
+	width: 504%;
+	left: -145%;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent {
+	height: calc(100% + 16px);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	margin-right: 35px;
+	position: relative;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent h1 {
+	color: #ffffff69;
+	font-size: 11px;
+
+	position: relative;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent h1:before {
+	content: "";
+	display: block;
+
+	position: absolute;
+
+	top: 50%;
+	right: calc(-100% - 13px);
+
+	transform: translateY(-50%);
+
+	width: 25px;
+	height: 3px;
+
+	background-color: #2f4f5e;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent h1:first-child:before {
+	width: 45px;
+	right: calc(-100% - 26px);
+
+	transform: translateY(-.5px);
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent h1:last-child:before {
+	width: 50px;
+	right: calc(-100% - 43px);
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-percent section {
+	position: absolute;
+
+	top: 50%;
+	right: -10px;
+
+	transform: translateY(-50%);
+
+	width: 3px;
+	height: calc(100% - 14px);
+
+	background-color: #2f4f5e;
+}
+
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range {
+	position: absolute;
+
+	top: 0;
+	right: -30px;
+
+	height: 100%;
+	width: 20px;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input {
+	transform: rotate(-90deg);
+
+	position: absolute;
+
+	top: 47.6%;
+	left: -1440%;
+
+	width: calc(3038% - 20px);
+
+	background-color: #283f4a;
+	border: 2px solid #2f4f5e;
+
+	padding: 10px;
+	padding-bottom: 11px;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input::-webkit-slider-runnable-track,
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input::-webkit-range-track {
+	background-color: #2f4f5e;
+	border-radius: 0;
+
+	height: 4px;
+}
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input::-webkit-slider-thumb,
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input::-webkit-range-thumb,
+.fuel .fuel-body .fuel-body-fill .fuel-body-fill-range input::-webkit-thumb
+{
+    margin-top: -5.5px;
+
+    border-radius: 3px;
+    background-color: #4f7a8e;
+
+    width: 30px;
+}
+
+
+.fuel .fuel-body-shop {
+	width: calc(100% - 320px - 60px);
+}
+.fuel .fuel-body-shop header h1 {
+	font-family: 'Druk Cyr';
+	font-size: 60px;
+
+	line-height: 40px;
+
+	color: #3b6e89;
+	-webkit-text-stroke: 2px #234252;
+	text-align: right;
+}
+.fuel .fuel-body-shop header h2 {
+	margin-top: 10px;
+	opacity: .6;
+
+	font-size: 12px;
+	text-align: right;
+}
+.fuel .fuel-body-shop .fuel-body-shop-elems {
+	width: 100%;
+	max-height: calc(100% - 67px - 15px);
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+
+	margin-top: 15px;
+	overflow: auto;
+}
+.fuel .fuel-body-shop .fuel-body-shop-elems::-webkit-scrollbar {
+	display: none;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item {
+	background-color: #24404e;
+	padding: 15px;
+
+	width: 300px;
+	border-radius: 6px;
+
+	position: relative;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item + .fuel-body-shop-item {
+	margin-top: 6px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item img {
+	position: absolute;
+
+	top: 50%;
+	left: -35px;
+
+	transform: translateY(-50%);
+	width: 95px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item h1,
+.fuel .fuel-body-shop .fuel-body-shop-item h2 {
+	text-align: right;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item h1 {
+	font-size: 16px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item h2 {
+	font-size: 12px;
+	color: #65a4c3;
+}
+
+.fuel .fuel-body-shop .fuel-body-shop-item div {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-end;
+
+	margin-top: 15px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item div h2 {
+	width: 100%;
+
+	color: white;
+	opacity: .6;
+
+	margin-bottom: 3px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item div .btn {
+	background-color: #2f4f5e;
+	border: none;
+
+	font-size: 12px;
+	padding: 7px 18px;
+}
+.fuel .fuel-body-shop .fuel-body-shop-item div .btn + .btn {
+	margin-left: 5px;
+}

@@ -1,0 +1,206 @@
+.phone-app-call {
+	background-color: white;
+}
+
+
+.phone-app-call .phone-app-call-search {
+	height: 40%;
+	overflow: auto;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem h1 {
+	font-size: 11px;
+	color: black;
+
+	padding: 10px;
+	padding-bottom: 0;
+
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem h1:after {
+	content: "Развернуть";
+	display: none;
+
+	font-size: 10px;
+
+	color: black;
+	opacity: .5;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem h1:hover:after {
+	opacity: 1;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem-hide h1:after {
+	content: "Развернуть";
+	display: block;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem:not(.phone-app-call-search-elem-hide):last-child h1:after {
+	content: "Свернуть";
+	display: block;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section {
+	margin-top: 10px;
+	transition: .3s;
+
+	overflow: hidden;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem-hide section {
+	display: none;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section .phone-app-call-search-elem-item {
+	display: flex;
+	align-items: flex-start;
+
+	transition: .3s;
+	padding: 5px 10px;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section .phone-app-call-search-elem-item:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section .phone-app-call-search-elem-item + .phone-app-call-search-elem-item {
+/*	margin-top: 7px;*/
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section .phone-app-call-search-elem-item h2 {
+	margin-left: 10px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	font-size: 13px;
+}
+.phone-app-call .phone-app-call-search .phone-app-call-search-elem section .phone-app-call-search-elem-item h2 span {
+	width: 100%;
+
+	font-size: 12px;
+	opacity: .6;
+}
+
+
+.phone-app-call .phone-app-call-number {
+	width: calc(100% - 20px);
+	height: calc(60% - 20px);
+
+	padding: 10px;
+}
+
+.phone-app-call .phone-app-call-number .phone-app-call-number-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button {
+	background-color: transparent;
+	border: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 50%;
+
+	width: 27px;
+	height: 27px;
+
+	transition: .3s;
+	position: relative;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button svg {
+	font-size: 16px;
+	opacity: .8;
+
+	transition: .3s;
+}
+/*.phone-app-call .phone-app-call-number .phone-app-call-number-text button:hover {
+	background-color: rgba(0, 0, 0, .4);
+}*/
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button:hover svg {
+	opacity: 1;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button .phone-app-call-number-text-context {
+	position: absolute;
+	z-index: 5;
+
+	left: 100%;
+	top: 0;
+
+	background-color: white;
+	box-shadow: 1px 1px 12px .5px rgba(0, 0, 0, .11);
+
+	overflow: hidden;
+	border-radius: 4px;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button .phone-app-call-number-text-context h1 {
+	font-size: 10px;
+	white-space: nowrap;
+
+	padding: 7px 10px;
+	transition: .2s;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-text button .phone-app-call-number-text-context h1:hover {
+	background-color: rgba(0, 0, 0, .07);
+}
+
+.phone-app-call .phone-app-call-number .phone-app-call-number-body {
+	margin-top: 10px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	width: calc(100% - 40px);
+	padding: 0 20px;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-body section {
+	width: 45px;
+	height: 45px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-right: 30px;
+	margin-bottom: 2px;
+
+	transform: translateX(15px);
+	font-size: 20px;
+
+	transition: .3s;
+	border-radius: 50%;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-body section:nth-child(10),
+.phone-app-call .phone-app-call-number .phone-app-call-number-body section:nth-child(12) {
+	color: #0000006b;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-body section:hover {
+	background-color: rgba(0, 0, 0, .3);
+	color: white;
+}
+
+.phone-app-call .phone-app-call-number .phone-app-call-number-submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-top: 10px;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-submit button {
+	border: 0;
+	background-color: green;
+
+	color: white;
+
+	width: 45px;
+	height: 45px;
+
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.phone-app-call .phone-app-call-number .phone-app-call-number-submit button svg {
+	font-size: 22px;
+}

@@ -1,0 +1,385 @@
+.phone-app-messenger {
+	background-color: white;
+
+	height: calc(100% - 38px);
+	padding-top: 0;
+}
+
+.phone-app-messenger header {
+	width: calc(100% - 30px);
+	padding: 10px 15px;
+
+	background-color: #622bb9;
+	color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding-top: 30px;
+}
+.phone-app-messenger header section {
+	display: flex;
+	align-items: center;
+}
+.phone-app-messenger header section button {
+	background-color: transparent;
+	border: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone-app-messenger header section button + button {
+	margin-left: 7px;
+}
+.phone-app-messenger header section button svg {
+	color: white;
+	font-size: 16px;
+}
+.phone-app-messenger header section h1 {
+	margin-left: 7px;
+}
+
+.phone-app-messenger .phone-app-messenger-body {
+	height: calc(100% - 59px);
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.phone-app-messenger .phone-app-messenger-list {
+
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem {
+	padding: 10px;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	transition: .3s;
+	position: relative;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem:hover {
+	background-color: rgba(0, 0, 0, .1);
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem + .phone-app-messenger-list-elem:before {
+	position: absolute;
+
+	display: block;
+	content: "";
+
+	width: calc(100% - 40px - 10px);
+	height: 1px;
+
+	background-color: rgba(0, 0, 0, .2);
+
+	right: 0;
+	top: 0;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section {
+	display: flex;
+	align-items: center;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section .phone-avatar {
+	margin-right: 10px;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section h1 {
+	display: flex;
+	align-items: center;
+}
+
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:first-child h1 {
+	display: flex;
+	flex-wrap: wrap;
+
+	font-size: 13px;
+	font-weight: 600;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:first-child h1 span {
+	font-size: 11px;
+	opacity: .7;
+
+	margin-top: 2px;
+	white-space: nowrap;
+
+	overflow: hidden;
+	width: 175px;
+
+	display: flex;
+	align-items: center;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:first-child h1 span svg {
+	margin-right: 2px;
+}
+
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:last-child {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:last-child h1 svg {
+	font-size: 13px;
+	color: #2b762b;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:last-child h1 span {
+	font-size: 10px;
+	opacity: .6;
+}
+.phone-app-messenger .phone-app-messenger-list .phone-app-messenger-list-elem section:last-child button {
+	font-size: 11px;
+	transform: translateY(25%);
+
+	background-color: #2b762b;
+	color: white;
+
+	border: 0;
+	padding: 1px 4px;
+
+	border-radius: 4px;
+}
+
+
+
+.phone-app-messenger-sms {
+	transition: .3s;
+}
+.phone-app-messenger-sms-open {
+	transform: translateX(-100%);
+}
+
+.phone-app-messenger-sms header {
+	padding: 5px 15px;
+	padding-top: 23px;
+}
+.phone-app-messenger-sms header .phone-avatar {
+	margin-left: 10px;
+}
+
+.phone-app-messenger-sms .phone-app-messenger-sms-list {
+	padding: 10px;
+
+	width: calc(100% - 20px);
+	height: calc(100% - 20px - 42px);
+
+	overflow: auto;
+	transition: .3s;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list-attach {
+	height: calc(100% - 20px - 42px - 73px);
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list::-webkit-scrollbar {
+	display: none;
+}
+
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem {
+	display: flex;
+	justify-content: flex-end;
+
+	width: 100%;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem + .phone-app-messenger-sms-elem {
+	margin-top: 5px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div {
+	max-width: 82%;
+	background-color: #b1ffb1;
+
+	padding: 3px 6px;
+	padding-left: 8px;
+
+	display: flex;
+	align-items: flex-end;
+
+	border-radius: 12px 4px 0 12px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div h1 {
+	font-size: 13px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div h2 {
+	font-size: 10px;
+	margin-left: 5px;
+
+	color: #2b762b;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div svg {
+	margin-left: 3px;
+	font-size: 13px;
+
+	color: #2b762b;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem-reverse {
+	flex-direction: row-reverse;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem-reverse div {
+	background-color: white;
+	border-radius: 0 12px 12px 4px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div .phone-app-messenger-icotype {
+	color: white;
+	margin: 0;
+
+	transform: translateY(-2px);
+	margin-right: 3px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div .phone-app-messenger-icotype ~ h2,
+.phone-app-messenger-sms .phone-app-messenger-sms-list .phone-app-messenger-sms-elem div .phone-app-messenger-icotype ~ svg {
+	color: white;
+	opacity: .6;
+}
+
+.phone-app-messenger-sms .phone-app-messenger-sms-input {
+	display: flex;
+	align-items: center;
+
+	background-color: white;
+	padding-right: 12px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input input {
+	background-color: transparent;
+	color: black;
+
+	width: calc(100% - 24px);
+	height: calc(100% - 24px);
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input input::placeholder {
+	color: black;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input svg {
+	font-size: 20px;
+	opacity: .7;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input svg:hover {
+	opacity: 1;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input svg + svg {
+	margin-left: 7px;
+}
+
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach {
+	background-color: white;
+
+	display: flex;
+	align-items: center;
+
+	padding: 12px;
+	width: calc(100% - 24px);
+
+	overflow: auto;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach::-webkit-scrollbar {
+	display: none;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	width: 70px;
+	min-width: 70px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach section + section {
+	margin-left: 12px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach section h1 {
+	width: 100%;
+	text-align: center;
+
+	font-size: 10px;
+	margin-top: 5px;
+}
+.phone-app-messenger-sms .phone-app-messenger-sms-input-attach section div {
+	background-color: #622bb9;
+	color: white;
+
+	width: 30px;
+	height: 30px;
+
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.phone-app-messenger .phone-app-messenger-swap {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	z-index: 5;
+	background-color: rgba(0, 0, 0, .4);
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+
+	transition: .3s;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-wrap {
+	width: 65%;
+	height: 100%;
+
+	transition: .3s;
+	transform: translateX(-100%);
+
+	background-color: white;
+	color: black;
+}
+.phone-app-messenger .phone-app-messenger-swap-open {
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+.phone-app-messenger .phone-app-messenger-swap-open .phone-app-messenger-swap-wrap {
+	transform: none;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-avatar {
+	background-color: #622bb9;
+	color: white;
+
+	padding: 10px;
+	padding-top: 30px;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-avatar h1 {
+	margin-top: 7px;
+	font-size: 12px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-avatar h1 span {
+	width: 100%;
+	font-size: 10px;
+
+	color: #be99f7;
+}
+
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-nav section {
+	padding: 15px 10px;
+
+	display: flex;
+	align-items: center;
+
+	transition: .3s;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-nav section:hover {
+	background-color: rgba(0, 0, 0, .1);
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-nav section h1 {
+	margin-left: 10px;
+
+	font-size: 11px;
+	font-weight: 600;
+}
+.phone-app-messenger .phone-app-messenger-swap .phone-app-messenger-swap-nav section svg {
+	opacity: .5;
+}

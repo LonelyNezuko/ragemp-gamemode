@@ -1,0 +1,359 @@
+.inventory {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+	position: relative;
+}
+.inventory .inventory-_wrap {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+	position: relative;
+}
+
+.inventory .inventory-wrap {
+	min-width: calc(320px + 5px + 4px);
+	width: calc(320px + 5px + 4px);
+	height: 100%;
+
+	position: relative;
+}
+.inventory .inventory-wrap:nth-child(2) {
+	margin: 0 40px;
+}
+
+
+.inventory .inventory-char {
+	width: 100%;
+	height: 90%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+}
+.inventory .inventory-char-wrap {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	z-index: 5;
+
+	width: 250px;
+	height: 595px;
+}
+.inventory .inventory-char .inventory-char-img {
+	width: 250px;
+	height: auto;
+}
+.inventory .inventory-char .inventory-char-wrap .inventory-elem {
+	position: absolute;
+
+	width: 50px;
+	height: 50px;
+
+	margin: 0;
+}
+
+.inventory .inventory-fast {
+	position: absolute;
+
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+}
+.inventory .inventory-fast .inventory-elem {
+	margin: 0;
+}
+.inventory .inventory-fast .inventory-elem .btn-key {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+
+	transform: translate(50%, -50%);
+
+	text-shadow: 0px 0px 7px rgba(0,0,0,0.57);
+	font-size: 14px;
+}
+
+.inventory .inventory-body {
+	height: 100%;
+	width: 100%;
+}
+.inventory .inventory-body + .inventory-body {
+	margin-top: 20px;
+}
+
+.inventory .inventory-body h1 {
+	font-size: 38px;
+	line-height: 38px;
+	font-family: 'Druk Cyr';
+
+	text-transform: uppercase;
+}
+
+.inventory .inventory-body .inventory-body-weight {
+	margin-top: 5px;
+	width: 100%;
+}
+.inventory .inventory-body .inventory-body-weight h2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	opacity: .7;
+}
+.inventory .inventory-body .inventory-body-weight h2,
+.inventory .inventory-body .inventory-body-weight h2 span {
+	font-size: 12px;
+}
+.inventory .inventory-body .inventory-body-weight section {
+	width: 100%;
+	height: 6px;
+
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 4px;
+
+	overflow: hidden;
+}
+.inventory .inventory-body .inventory-body-weight section section {
+	background-color: #ffffffa8;
+}
+
+.inventory .inventory-body .inventory-body-items {
+	background-color: rgba(255, 255, 255, .2);
+	border: 2px solid rgba(255, 255, 255, .4);
+
+	border-radius: 8px;
+
+	width: calc(100% - 5px - 4px);
+	height: calc(100% - 38px - 5px - 23px - 5px - 10px - 4px);
+
+	margin-top: 10px;
+	position: relative;
+
+	overflow: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	padding-top: 5px;
+	padding-left: 5px;
+
+	transition: .3s;
+}
+.inventory .inventory-body .inventory-body-items::-webkit-scrollbar {
+    display: none;
+}
+
+
+.inventory-elem {
+	background-color: rgba(255, 255, 255, .2);
+	border: 2px solid rgba(255, 255, 255, .4);
+
+	width: 70px;
+	height: 70px;
+
+	border-radius: 8px;
+
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	position: relative;
+	color: white;
+}
+.inventory-elem:not(.ui-draggable-dragging) {
+	transition: .3s;
+}
+.inventory-elem.ui-draggable-dragging {
+	background-color: transparent;
+	border-color: transparent;
+}
+.inventory-elem.ui-draggable-dragging .inventory-elem-count,
+.inventory-elem.ui-draggable-dragging .inventory-elem-status,
+.inventory-elem.ui-draggable-dragging .btn-key {
+	display: none;
+}
+.inventory-elem .inventory-elem-drag {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+}
+.inventory-elem .inventory-elem-img {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.inventory-elem .inventory-elem-img img {
+	width: 70%;
+	height: auto;
+}
+.inventory-elem .inventory-elem-img svg {
+	font-size: 25px;
+	opacity: .7;
+}
+.inventory-elem-hover .inventory-elem-img svg {
+	color: #00ff00a1;
+}
+.inventory-elem-nothover .inventory-elem-img svg {
+	color: #ff00008c;
+}
+.inventory-elem .inventory-elem-count {
+	position: absolute;
+
+	bottom: 1px;
+	right: 5px;
+
+	text-shadow: 0px 0px 7px rgba(0,0,0,0.57);
+	font-size: 12px;
+}
+.inventory-elem .inventory-elem-status {
+	position: absolute;
+
+	top: 3px;
+	left: 3px;
+
+	width: 10px;
+	height: 10px;
+
+	border-radius: 50%;
+	border: 0;
+}
+.inventory-elem .inventory-elem-status:before {
+	display: block;
+	content: "dasdsad";
+
+	position: absolute;
+
+	left: -25%;
+	top: 50%;
+
+	transform: translate(-25%, 50%);
+
+	color: black;
+	background-color: #ffffff9e;
+
+	font-size: 10px;
+	padding: 2px 5px;
+
+	border-radius: 4px;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+
+	transition: .3s;
+	white-space: nowrap;
+}
+.inventory-elem .inventory-elem-status:not(.inventory-elem-status-good):hover:before {
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+.inventory-elem .inventory-elem-status-good {
+	display: none;
+}
+.inventory-elem .inventory-elem-status-normal {
+	background-color: #37c337;
+}
+.inventory-elem .inventory-elem-status-normal:before {
+	content: "Нормально";
+}
+.inventory-elem .inventory-elem-status-bad {
+	background-color: #ff6262;
+}
+.inventory-elem .inventory-elem-status-bad:before {
+	content: "Плохо";
+}
+.inventory-elem .inventory-elem-status-verybad {
+	background-color: #d30000;
+}
+.inventory-elem .inventory-elem-status-verybad:before {
+	content: "Очень плохо";
+}
+
+
+.inventory .inventory-trash {
+	height: 100%;
+	width: 100%;
+
+	background-color: red;
+
+	position: absolute;
+	top: 0;
+}
+
+
+.inventory-elem-hover {
+	border-color: #00ff006b;
+	background-color: #00ff0040;
+}
+.inventory-elem-nothover {
+	border-color: #ff000057;
+}
+
+
+.inventory .inventory-body .inventory-body-items.inventory-elem-hover-trash {
+	position: relative;
+	border-color: #ff000057;
+}
+.inventory .inventory-body .inventory-body-items.inventory-elem-hover-trash-pre:before {
+	display: block;
+	content: "✘";
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	border-radius: 8px;
+	background-color: #fd5b5ba3;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 30px;
+	color: #ed7979;
+
+	transition: .3s;
+}
+.inventory .inventory-body .inventory-body-items.inventory-elem-hover-trash:before {
+	opacity: 1;
+	visibility: visible;
+	z-index: 5;
+}
+
+
+.inventory .inventory-char-set {
+	background-color: rgba(0, 0, 0, .2);
+	border-color: rgba(0, 0, 0, .4);
+}

@@ -1,0 +1,143 @@
+.tuning {
+	position: absolute;
+
+	top: 0;
+	left: 25px;
+
+	width: 970px;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+}
+
+.tuning .tuning-menu {
+	color: white;
+	background-color: #162a34db;
+
+	height: 90%;
+	width: 40%;
+
+	border-radius: 10px;
+	overflow: hidden;
+}
+.tuning .tuning-menu .tuning-menu-title {
+	padding: 15px;
+
+	font-family: 'Rage';
+	font-size: 30px;
+}
+
+
+.tuning .tuning-menu .tuning-menu-list {
+	height: calc(100% - 67px);
+	overflow: auto;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item {
+	padding: 15px;
+	transition: .3s;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item-sel {
+	background-color: #162a34;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-desc {
+	display: flex;
+	align-items: flex-start;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-desc .tuning-menu-list-item-desc-img {
+	width: 70px;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-desc h1 {
+	margin-left: 15px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-desc h1 span {
+	width: 100%;
+
+	font-size: 12px;
+	opacity: .7;
+
+	margin-top: 3px;
+}
+
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body {
+	margin-top: 20px;
+	margin-left: 50px;
+
+	position: relative;
+
+	display: none;
+	transition: .3s;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item-sel .tuning-menu-list-item-body {
+	display: block;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body .tuning-menu-list-item-body-visual {
+	position: absolute;
+
+	top: 0;
+	left: -10.5%;
+
+	width: 2px;
+	height: calc(100% - 15px - 8px - 0.5px);
+
+	background-color: #ffffff0d;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	background-color: #1f3f4e;
+	padding: 15px;
+
+	border-radius: 8px;
+	position: relative;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section:before {
+	position: absolute;
+
+	content: "";
+	display: block;
+
+	width: 31px;
+	height: 2px;
+
+	background-color: #ffffff0d;
+
+	top: 50%;
+	left: calc(-10% + 0.5px);
+
+	transform: translateY(-50%);
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section.tuning-menu-list-item-body-sel {
+	background-color: #2a5568;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section + section {
+	margin-top: 8px;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section h2 {
+	color: #3c83a5;
+	font-weight: 600;
+
+	width: 100%;
+	text-align: right;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section svg {
+	color: #44b744;
+	margin-bottom: 3px;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.tuning .tuning-menu .tuning-menu-list .tuning-menu-list-item .tuning-menu-list-item-body section .btn {
+	margin-top: 10px;
+	border: 0;
+
+	background-color: #508da9;
+	color: white;
+}

@@ -1,0 +1,279 @@
+.createchar {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	z-index: 100;
+}
+
+.createchar .createchar-wrap {
+	position: absolute;
+
+	top: 35px;
+	left: 35px;
+
+	height: calc(100% - 35px - 35px);
+	width: 350px;
+}
+
+.createchar .createchar-header {
+	display: flex;
+	align-items: center;
+
+	background-color: #333;
+	padding: 7px;
+
+	border-radius: 4px;
+}
+.createchar .createchar-header .btn-key {
+	background-color: #555;
+	color: white;
+}
+.createchar .createchar-header section {
+	display: flex;
+	align-items: center;
+
+	margin: 0 5px;
+	max-width: 270px;
+	overflow: hidden;
+}
+.createchar .createchar-header section button {
+	min-width: 40px;
+	height: 40px;
+
+	border-radius: 5px;
+	border: 0;
+
+	color: white;
+	background-color: #444;
+}
+.createchar .createchar-header section button + button {
+	margin-left: 5px;
+}
+.createchar .createchar-header section button.createchar-header-sel {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}
+.createchar .createchar-header section button svg {
+	font-size: 25px;
+	transform: translateY(1px);
+}
+
+
+.createchar .createchar-body {
+	margin-top: 5px;
+
+	background-color: #333;
+	padding: 7px 15px;
+
+	height: calc(100% - 14px - 54px - 5px);
+	border-radius: 4px;
+
+	color: white;
+	overflow: auto;
+
+	position: relative;
+}
+.createchar .createchar-body .createchar-body-title {
+	font-size: 25px;
+	font-family: 'Trixiepro';
+
+	margin-bottom: 20px;
+}
+
+.createchar .createchar-edit {
+	width: 100%;
+}
+.createchar .createchar-edit + .createchar-edit {
+	margin-top: 15px;
+}
+.createchar .createchar-edit h1 {
+	font-size: 12px;
+	margin-bottom: 5px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.createchar .createchar-edit h1 .createchar-edit-s-choice button {
+	padding: 4px 13px;
+	font-size: 12px;
+}
+
+.createchar .createchar-edit-input input {
+	width: calc(100% - 24px);
+	background-color: #444;
+}
+
+.createchar .createchar-edit-choice .createchar-edit-s-choice {
+	width: 80%;
+	margin: 0 auto;
+}
+.createchar .createchar-edit-s-choice {
+	display: flex;
+	align-items: center;
+
+	border-radius: 4px;
+	overflow: hidden;
+}
+.createchar .createchar-edit-s-choice button {
+	width: 100%;
+	border: none;
+
+	background-color: #444;
+	border-radius: 0;
+
+	padding: 10px 13px;
+	font-size: 13px;
+}
+.createchar .createchar-edit-s-choice button.createchar-edit-s-choice-sel {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}
+
+.createchar .createchar-edit-img section {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 100%;
+	margin-top: 10px;
+}
+.createchar .createchar-edit-img section button {
+	border: 0;
+
+	width: calc(100% / 3 - 5px);
+	height: auto;
+
+	background-color: #5555556b;
+	overflow: hidden;
+
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	border-radius: 4px;
+}
+.createchar .createchar-edit-img section button img {
+	width: 100%;
+	height: 100%;
+}
+.createchar .createchar-edit-img section button.createchar-edit-img-sel {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}
+.createchar .createchar-edit-img button.createchar-edit-img-sel-border {
+	position: relative;
+}
+.createchar .createchar-edit-img button.createchar-edit-img-sel-border:before {
+	content: "✔";
+	position: absolute;
+
+	top: 7%;
+	left: 7%;
+
+	width: 20px;
+	height: 20px;
+
+	border-radius: 50%;
+
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+	color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 12px;
+}
+
+.createchar .createchar-edit-range section,
+.createchar .createchar-edit-select section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.createchar .createchar-edit-range section span {
+	font-size: 12px;
+	white-space: nowrap;
+}
+.createchar .createchar-edit-range section input {
+	width: 100%;
+	margin: 0 10px;
+}
+.createchar .createchar-edit-range section input::-webkit-slider-runnable-track,
+.createchar .createchar-edit-range section input::-webkit-range-track {
+	background-color: #555;
+}
+.createchar .createchar-edit-range section input::-webkit-slider-thumb,
+.createchar .createchar-edit-range section input::-webkit-range-thumb,
+.createchar .createchar-edit-range section input::-webkit-thumb {
+	background-color: #666;
+}
+
+.createchar .createchar-edit-select section {
+	background-color: #444;
+	padding: 5px 6px;
+
+	border-radius: 2px;
+}
+.createchar .createchar-edit-select section button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 0;
+	background-color: #555;
+
+	color: white;
+
+	width: 25px;
+	height: 25px;
+
+	border-radius: 3px;
+}
+.createchar .createchar-edit-select section button svg {
+	font-size: 13px;
+}
+.createchar .createchar-edit-select section button:hover {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}
+
+.createchar .createchar-edit-color section {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.createchar .createchar-edit-color section button {
+	background-color: white;
+
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+.createchar .createchar-edit-btn-footer {
+	position: absolute;
+
+	bottom: 15px;
+	left: 15px;
+
+	width: calc(100% - 30px);
+}
+.createchar .createchar-edit-btn-footer .btn {
+	width: 100%;
+	padding: 20px 0;
+
+	border: 0;
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}
+.createchar .createchar-edit-btn {
+	
+}
+.createchar .createchar-edit-btn .btn {
+	width: 100%;
+	padding: 15px 0;
+
+	border: 0;
+	background-color: #444;
+}
+.createchar .createchar-edit-btn .btn:hover {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}

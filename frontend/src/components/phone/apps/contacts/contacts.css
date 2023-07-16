@@ -1,0 +1,253 @@
+.phone-app-contacts {
+	background-color: white;
+	position: relative;
+}
+
+.phone-app-contacts header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 5px 15px;
+}
+.phone-app-contacts header h1 {
+	font-family: 'Akrobat';
+	font-size: 16px;
+}
+.phone-app-contacts header section {
+	display: flex;
+	align-items: center;
+}
+.phone-app-contacts header button {
+	background-color: transparent;
+	border: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: .2s;
+
+	width: 25px;
+	height: 25px;
+
+	border-radius: 50%;
+}
+.phone-app-contacts header button + button {
+	margin-left: 3px;
+}
+.phone-app-contacts header button svg {
+	font-size: 15px;
+}
+.phone-app-contacts header button:hover {
+	background-color: rgba(0, 0, 0, .15);
+}
+
+.phone-app-contacts .phone-app-contacts-list {
+	margin: 7px 0;
+
+	height: calc(100% - 35px - 14px);
+	overflow: auto;
+}
+.phone-app-contacts .phone-app-contacts-list::-webkit-scrollbar {
+	display: none;
+}
+.phone-app-contacts .phone-app-contacts-list .phone-app-contacts-list-sort {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	padding: 0 15px;
+
+	font-size: 12px;
+	opacity: .7;
+}
+.phone-app-contacts .phone-app-contacts-list .phone-app-contacts-list-sort:before {
+	display: block;
+	content: "";
+
+	width: 100%;
+	height: 1px;
+
+	background-color: rgba(0, 0, 0, .4);
+	margin-right: 10px;
+}
+.phone-app-contacts .phone-app-contacts-list section {
+	display: flex;
+	align-items: center;
+
+	padding: 7px 15px;
+	transition: .2s;
+}
+.phone-app-contacts .phone-app-contacts-list section:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
+.phone-app-contacts .phone-app-contacts-list section h2 {
+	margin-left: 7px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	font-size: 13px;
+}
+.phone-app-contacts .phone-app-contacts-list section h2 span {
+	width: 100%;
+
+	font-size: 11px;
+	opacity: .7;
+}
+
+
+.phone-app-contacts .phone-app-contacts-add {
+	position: absolute;
+
+	width: calc(100% - 30px);
+	height: calc(100% - 38px);
+
+	top: 0;
+	left: 0;
+
+	background-color: rgba(0, 0, 0, .4);
+	z-index: 10;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+	padding: 0 15px;
+	padding-bottom: 38px;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+
+	transition: .3s;
+}
+.phone-app-contacts .phone-app-contacts-add-open {
+	opacity: 1;
+	visibility: visible;
+	z-index: 10;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-wrap {
+	background-color: white;
+	border-radius: 8px;
+
+	padding: 10px;
+	margin-top: 35px;
+
+	transform: translateY(-200%);
+	transition: .3s;
+
+	position: relative;
+	width: calc(100% - 20px);
+}
+.phone-app-contacts .phone-app-contacts-add-open .phone-app-contacts-add-wrap {
+	transform: none;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top {
+	display: flex;
+	align-items: flex-start;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top .phone-avatar {
+	margin-right: 10px;
+	margin-top: 3px;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top section div + div {
+	margin-top: 7px;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top section div,
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-second section div {
+	display: flex;
+	flex-wrap: wrap;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top section div label,
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-second section div label {
+	font-size: 12px;
+	width: 100%;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-top section div input,
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-second section div input {
+	background-color: rgba(0, 0, 0, .1);
+	color: black;
+
+	margin-top: 1px;
+}
+
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-second {
+	margin-top: 15px;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-second section div input {
+	width: calc(100% - 24px);
+}
+
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-bottom {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 25px;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-bottom .btn {
+	color: white;
+	font-size: 12px;
+
+	background-color: #622bb9;
+	border: 0;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-bottom .btn:last-child {
+	margin-left: 10px;
+
+	background-color: rgba(0, 0, 0, .1);
+	color: #0000006e;
+}
+.phone-app-contacts .phone-app-contacts-add .phone-app-contacts-add-bottom .btn svg {
+	margin: 0;
+}
+
+
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-add-wrap {
+	padding-top: calc(10px + 10px + 40px);
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-avatar {
+	position: absolute;
+
+	top: 10px;
+	left: 50%;
+
+	transform: translateX(-50%);
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem + .phone-app-contacts-profile-elem {
+	margin-top: 3px;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem:nth-child(2) {
+	justify-content: center;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem:nth-child(2) h1 {
+	margin-right: 5px;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem h1,
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem h2 {
+	font-size: 13px;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem h2 {
+	text-align: right;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-profile-elem:not(:nth-child(2)) h1 {
+	opacity: .5;
+	font-size: 12px;
+}
+
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-add-bottom .btn + .btn {
+	margin-left: 5px;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-add-bottom:last-child {
+	margin-top: 7px;
+}
+.phone-app-contacts .phone-app-contacts-profile .phone-app-contacts-add-bottom:last-child .btn {
+	background-color: rgba(0, 0, 0, .1);
+	color: #0000006e;
+}

@@ -1,0 +1,250 @@
+.hud-speed {
+    position: absolute;
+
+    bottom: 35px;
+    right: 15px;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.hud-speed .hud-speedometr {
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+
+    margin-right: 50px;
+    margin-left: 40px;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+.hud-speed .hud-speedometr-def {
+    width: 255px;
+    height: 100%;
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-bg {
+    width: 100%;
+    height: 100%;
+
+/*    background: url('/assets/speedometr/bg.png');*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-count {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 95px;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-count span {
+    opacity: .25;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-count h1,
+.hud-speed .hud-speedometr-def .hud-speedometr-def-count span {
+    font-weight: 700;
+    font-size: 48px;
+
+    line-height: 38px;
+    font-family: 'Gilroy';
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-count h2 {
+    width: 100%;
+    text-align: right;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+    font-family: 'Gilroy';
+}
+
+.hud-speed .hud-speedometr-def h5 {
+    position: absolute;
+
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.hud-speed .hud-speedometr-def .hud-speedometr-def-piece {
+    position: absolute;
+
+    bottom: 0;
+    right: -7px;
+
+    width: 105%;
+    height: 105%;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-piece-big {
+    position: absolute;
+
+    width: 7px;
+    height: 2px;
+
+    background-color: white;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-def-piece-bigged {
+    position: absolute;
+
+    width: 23px;
+    height: auto;
+}
+
+.hud-speed .hud-speedometr-def .hud-speedometr-def-stick {
+    position: absolute;
+
+    width: 8px;
+    height: 100px;
+
+    top: calc(50% - 20px);
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin:100% 100%;
+}
+
+.hud-speed .hud-speedometr-def .hud-speedometr-speed
+{
+	position: absolute;
+
+	top: -61px;
+	left: -123px;
+
+	transform: rotate(-33deg) rotateY(-180deg);
+	transform-origin: 50% 50% 0px;
+
+	width: calc(100% + 250px);
+	height: calc(100% + 175px);
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-speed circle
+{
+	stroke: white;
+
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: -82;
+    /*-39, -126*/
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-speed:not(.hud-speedometr-speed-bg) {
+	z-index: 5;
+}
+.hud-speed .hud-speedometr-def .hud-speedometr-speed-bg circle {
+	stroke: rgba(0, 0, 0, .3);
+	stroke-dashoffset: -39;
+}
+
+
+.hud-speed .hud-speedometr-data {
+    position: absolute;
+
+    bottom: 30px;
+    left: -30px;
+}
+
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel {
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    top: -29px;
+    right: -64px;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel .hud-speedometr-data-fuel-bg {
+    font-size: 31px;
+
+    position: absolute;
+
+    top: calc(50% - 1px);
+    left: calc(50% + 2px);
+
+    transform: translate(-50%, -50%);
+    opacity: .3;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel h1 {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: 'Gilroy';
+    font-weight: 700;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel .hud-speedometr-data-fuel-svg
+{
+	position: absolute;
+
+	top: 0px;
+	left: 0px;
+
+	transform: rotate(-117deg) rotateY(-180deg);
+	transform-origin: 50% 50% 0px;
+
+	width: calc(100%);
+	height: calc(100%);
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel .hud-speedometr-data-fuel-svg circle
+{
+	stroke: #FFBD5F;
+
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: -85;
+    /*-48, -126*/
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel .hud-speedometr-data-fuel-svg:not(.hud-speedometr-data-fuel-svg-bg) {
+	z-index: 5;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-fuel .hud-speedometr-data-fuel-svg-bg circle {
+	stroke: rgba(0, 0, 0, .7);
+	stroke-dashoffset: -48;
+}
+
+.hud-speed .hud-speedometr-data .hud-speedometr-data-elem {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-elem svg {
+    font-size: 22px;
+    margin-right: 7px;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-elem h1 {
+    background: #15151582;
+
+    border-radius: 5px;
+    padding: 3px 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Gilroy';
+
+    text-align: right;
+    margin-right: 5px;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-elem.hud-speedometr-data-elem-on h1 {
+    background: white;
+    color: black;
+}
+.hud-speed .hud-speedometr-data .hud-speedometr-data-elem.hud-speedometr-data-elem-on svg {
+	color: white;
+}

@@ -1,0 +1,476 @@
+.hud {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+}
+
+
+.hud-chat {
+	position: absolute;
+
+	top: 15px;
+	left: 15px;
+
+	color: white;
+	width: 450px;
+}
+.hud-chat .hud-chat-body {
+	height: calc(250px - 12px);
+	padding: 6px;
+
+	border-radius: 4px 4px 0 0;
+	overflow: auto;
+
+	transition: .2s;
+}
+.hud-chat .hud-chat-body::-webkit-scrollbar {
+    display: none;
+}
+.hud-chat-open .hud-chat-body::-webkit-scrollbar {
+	display: block;
+}
+.hud-chat .hud-chat-body div {
+	display: flex;
+	align-items: flex-start;
+
+	position: relative;
+}
+/*.hud-chat .hud-chat-body div + div {
+	margin-top: 4px;
+}*/
+.hud-chat-open .hud-chat-body {
+	background-color: rgba(0, 0, 0, .2);
+}
+.hud-chat .hud-chat-body div h1 {
+	display: flex;
+	align-items: flex-start;
+}
+.hud-chat .hud-chat-body div h2 {
+	text-shadow: 0px 0px 21px rgba(0, 0, 0, .5);
+	font-size: 13px;
+}
+.hud-chat .hud-chat-body div .hud-chat-tag {
+	margin-right: 7px;
+	font-size: 13px;
+}
+.hud-chat .hud-chat-tag {
+	padding: 2px 6px;
+	font-size: 12px;
+
+	margin-right: 4px;
+	border-radius: 6px;
+
+	border: 0;
+	font-weight: 600;
+}
+.hud-chat .hud-chat-i {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+
+	border-radius: 0 0 4px 4px;
+	overflow: hidden;
+
+	background-color: rgba(0, 0, 0, .5);
+	transition: .2s;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+.hud-chat-open .hud-chat-i {
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+.hud-chat .hud-chat-i input {
+	width: calc(100% - 20px);
+
+	background-color: transparent;
+	border: 0;
+
+	padding: 10px;
+	color: white;
+
+	font-size: 13px;
+}
+.hud-chat .hud-chat-i input::placeholder {
+	color: white;
+	opacity: .3;
+
+	font-size: 13px;
+}
+.hud-chat .hud-chat-i button {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.hud-chat .hud-chat-i svg {
+	font-size: 25px;
+	margin-right: 10px;
+}
+.hud-chat .hud-chat-i svg.hud-chat-i-mute {
+	color: #db3535;
+}
+
+.hud .hud-logo {
+	position: absolute;
+
+	top: 15px;
+	right: 15px;
+}
+.hud .hud-logo .hud-logo-img {
+	display: flex;
+	justify-content: flex-end;
+}
+.hud .hud-logo .hud-logo-img img {
+	width: 150px;
+}
+.hud .hud-logo .hud-logo-img h1 {
+	font-family: 'Rage';
+	font-size: 40px;
+
+	text-align: center;
+	transform: translateY(5px);
+
+	color: white;
+}
+
+.hud .hud-logo .hud-data {
+	color: white;
+	opacity: .7;
+
+	margin-top: 5px;
+}
+.hud .hud-logo .hud-data section {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.hud .hud-logo .hud-data section:last-child span {
+	font-size: 11px;
+}
+.hud .hud-logo .hud-data h1 {
+	display: flex;
+	align-items: center;
+	text-shadow: 0px 0px 21px rgba(0, 0, 0, .5);
+}
+.hud .hud-logo .hud-data h1 svg {
+	margin-right: 2px;
+}
+.hud .hud-logo .hud-data h1 span {
+	transform: translateY(-1px);
+	text-shadow: 0px 0px 21px rgba(0, 0, 0, .5);
+}
+.hud .hud-logo .hud-data h1 + h1 {
+	margin-left: 10px;
+}
+
+.hud .hud-logo .hud-cash {
+	color: white;
+	text-align: right;
+
+	margin-top: 6px;
+}
+.hud .hud-logo .hud-cash h1 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.hud .hud-logo .hud-cash h1 svg {
+	margin-right: 4px;
+	font-size: 20px;
+}
+.hud .hud-logo .hud-cash h1 span {
+	font-size: 18px;
+	transform: translateY(-1px);
+}
+
+
+.hud .hud-notf {
+	position: absolute;
+
+	bottom: 15px;
+	left: 50%;
+
+	transform: translateX(-50%);
+	color: white;
+}
+.hud .hud-notf section {
+	background-color: rgba(255, 255, 255, .2);
+	padding: 8px 14px;
+
+	display: flex;
+	align-items: center;
+
+	border-radius: 4px;
+	max-width: 350px;
+
+	animation: hudNotfAnimation ease .5s;
+}
+.hud .hud-notf section + section {
+	margin-top: 8px;
+}
+.hud .hud-notf section span {
+	margin-left: 5px;
+	font-size: 13px;
+}
+.hud .hud-notf section svg {
+	font-size: 22px;
+}
+.hud .hud-notf section.hud-notf-success svg {
+	color: #39bfff;
+}
+.hud .hud-notf section.hud-notf-error svg {
+	color: #fb7474;
+}
+@keyframes hudNotfAnimation {
+	from {
+		transform: translateY(150%);
+	}
+	to {
+		transform: none;
+	}
+}
+
+
+.hud .hud-quest {
+	margin-top: 15px;
+	color: white;
+
+	text-align: right;
+
+	background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,.6) 0%, rgba(166,239,253,.6) 90.1% );
+	max-width: calc(300px - 24px);
+
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+.hud .hud-quest h1 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.hud .hud-quest h1 svg {
+	font-size: 20px;
+	margin-right: 5px;
+}
+.hud .hud-quest h1 span {
+	transform: translateY(-1px);
+	font-size: 15px;
+}
+.hud .hud-quest h2 {
+	font-size: 13px;
+	opacity: .8;
+}
+
+
+.hud .hud-banner {
+	position: absolute;
+
+	top: 15px;
+	left: 50%;
+
+	transform: translateX(-50%);
+	color: white;
+
+	background-color: #4583b1c2;
+
+	border-radius: 6px;
+	overflow: hidden;
+
+	max-height: 80px;
+	max-width: 280px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hud .hud-banner h1 {
+	padding: 10px 15px;
+	text-align: center;
+}
+.hud .hud-banner img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.hud .hud-map {
+	position: absolute;
+	color: white;
+
+	width: 220px;
+}
+.hud .hud-map .hud-map-gps {
+
+}
+.hud .hud-map .hud-map-gps h1 {
+	font-size: 20px;
+	color: #4583b1;
+
+	font-weight: 600;
+}
+.hud .hud-map .hud-map-gps h2 {
+	font-size: 14px;
+	font-weight: 600;
+}
+.hud .hud-map .hud-map-micro {
+	position: absolute;
+
+	right: 0;
+	top: 50%;
+
+	transform: translateY(-50%);
+	border-radius: 50%;
+
+	width: 40px;
+	height: 40px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hud .hud-map .hud-map-micro svg {
+	font-size: 30px;
+}
+.hud .hud-map .hud-map-micro-off {
+	background-color: #c95a5a;
+	opacity: .7;
+}
+.hud .hud-map .hud-map-micro-off svg {
+	font-size: 20px;
+}
+.hud .hud-map .hud-map-needs {
+	display: flex;
+	align-items: center;
+
+	margin-top: 15px;
+}
+.hud .hud-map .hud-map-needs section {
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	font-size: 12px;
+
+	transition: .2s;
+	opacity: .8;
+}
+.hud .hud-map .hud-map-needs section + section {
+	margin-left: 15px;
+}
+.hud .hud-map .hud-map-needs section h1 {
+	position: relative;
+	z-index: 5;
+
+	font-size: 12px;
+}
+.hud .hud-map .hud-map-needs section + .hud-def-health-elem {
+	margin-top: 10px;
+}
+
+.hud .hud-map .hud-map-needs section.hud-map-needs-thirst {
+	background-color: #247eaf;
+	color: black;
+}
+.hud .hud-map .hud-map-needs section.hud-map-needs-thirst svg circle,
+.hud .hud-map .hud-map-needs section.hud-map-needs-thirst .hud-map-needs-bg {
+	stroke: #76cfff;
+	color: #76cfff;
+}
+
+.hud .hud-map .hud-map-needs section.hud-map-needs-satiety {
+	background-color: #d78219;
+}
+.hud .hud-map .hud-map-needs section.hud-map-needs-satiety svg circle,
+.hud .hud-map .hud-map-needs section.hud-map-needs-satiety .hud-map-needs-bg {
+	stroke: #ffba65;
+	color: #ffba65;
+}
+.hud .hud-map .hud-map-needs section.hud-map-needs-satiety .hud-map-needs-bg {
+	top: calc(50%);
+}
+
+.hud .hud-map .hud-map-needs section svg
+{
+	position: absolute;
+
+	top: calc(50% + .2px);
+	left: calc(50%);
+
+	transform: rotateY(-180deg) rotate(-90deg) translate(50%, 50%);
+
+	width: calc(100% + 6px);
+	height: calc(100% + 5px);
+}
+.hud .hud-map .hud-map-needs section svg circle
+{
+	stroke: white;
+
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: -50;
+    /*-126*/
+}
+
+.hud .hud-map .hud-map-needs section .hud-map-needs-bg {
+	transform: translate(-50%, -50%);
+
+	width: 40%;
+	height: 40%;
+
+	z-index: 2;
+}
+
+
+.hud .hud-keys {
+	position: absolute;
+	color: white;
+}
+.hud .hud-keys h1 {
+	display: flex;
+	align-items: center;
+}
+.hud .hud-keys h1 + h1 {
+	margin-top: 7px;
+}
+.hud .hud-keys h1 .btn-key {
+	margin-right: 7px;
+	font-size: 13px;
+}
+.hud .hud-keys h1 span {
+	font-size: 13px;
+}
+
+
+.hud .hud-action {
+	position: absolute;
+
+	bottom: 30%;
+	left: 50%;
+
+	transform: translateX(-50%);
+	color: white;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.hud .hud-action h1 {
+	width: 100%;
+	text-align: center;
+
+	margin-top: 5px;
+}

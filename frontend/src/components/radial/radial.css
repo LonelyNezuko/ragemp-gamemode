@@ -1,0 +1,88 @@
+.radial {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	z-index: 50;
+
+	color: white;
+}
+
+.radial .radial-center {
+/*	background-color: #205772;*/
+	background-color: #444;
+
+	width: 130px;
+	height: 130px;
+
+	border-radius: 50%;
+	position: relative;
+
+	cursor: pointer;
+	transition: .3s;
+}
+.radial .radial-center section {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	transform: translateY(-3px);
+
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+.radial .radial-center h1 {
+	width: 80%;
+	text-align: center;
+
+	font-size: 11px;
+	margin-top: 3px;
+}
+.radial .radial-center svg {
+	font-size: 30px;
+}
+.radial .radial-center:hover {
+/*	background-color: #cf6767;*/
+	background-color: #205772;
+}
+.radial .radial-center:hover section:last-child {
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+.radial .radial-center section:last-child,
+.radial .radial-center:hover section:first-child {
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.radial .radial-btn {
+	position: absolute;
+
+	background-color: #444;
+	border: 0;
+
+	white-space: nowrap;
+	padding: 6px 13px;
+}
+.radial .radial-btn:hover {
+	background-color: #205772;
+}
+.radial .radial-btn svg {
+	transform: translateY(0px);
+}
+.radial .radial-btn h1,
+.radial .radial-btn h2 {
+	font-size: 13px;
+}
+.radial .radial-btn h2 {
+	margin-right: 4px;
+}

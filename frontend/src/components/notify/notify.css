@@ -1,0 +1,53 @@
+.notify {
+	position: absolute;
+
+	top: 25px;
+	right: 25px;
+
+	color: white;
+	z-index: 1000;
+}
+
+.notify section {
+	display: flex;
+	align-items: center;
+
+	background-color: white;
+	color: black;
+
+	padding: 8px 12px;
+	border-radius: 3px;
+
+	animation: notifyAnimation ease .6s;
+}
+.notify section + section {
+	margin-top: 7px;
+}
+.notify section svg {
+	margin-right: 5px;
+	font-size: 22px;
+}
+.notify section h1 {
+	font-size: 13px;
+}
+
+.notify section.notify-success {
+	background-color: #39bfff;
+	color: white;
+}
+.notify section.notify-error {
+	background-color: #fb7474;
+	color: white;
+}
+.notify section.notify-info svg {
+	opacity: .8;
+}
+
+@keyframes notifyAnimation {
+	from {
+		transform: translateX(150%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

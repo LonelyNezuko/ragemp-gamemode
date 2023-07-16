@@ -1,0 +1,323 @@
+.phone {
+	position: absolute;
+
+	bottom: 25px;
+	right: 25px;
+
+	background-color: black;
+	border-radius: 30px;
+
+	width: calc(300px - 14px);
+	height: calc(570px - 14px);
+
+	overflow: hidden;
+	padding: 7px;
+
+	font-size: 11px;
+	transform: translateY(200%);
+
+	transition: .3s;
+}
+.phone-open {
+	transform: none;
+}
+.phone .phone-display {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: 100%;
+
+	border-radius: 23px;
+	overflow: hidden;
+
+	position: relative;
+}
+
+.phone .phone-apps {
+	width: calc(100% - 20px);
+	max-height: calc(100% - 20px - 100px);
+
+	padding: 10px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	overflow: hidden;
+}
+
+
+.phone .phone-app {
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+	position: absolute;
+
+	bottom: -100%;
+	left: 0;
+
+	transition: .3s;
+
+	display: flex;
+	align-items: flex-start;
+}
+.phone .phone-app-open {
+	bottom: 0;
+}
+
+
+.phone .phone-activeapp {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, .5);
+}
+.phone .phone-activeapp .phone-activeapp-wrap {
+	width: calc(100% - 40px);
+	height: calc(100% - 40px - 25px - 40px);
+
+	padding: 20px;
+	padding-bottom: 0;
+
+	display: flex;
+	align-items: center;
+}
+.phone .phone-activeapp .phone-activeapp-wrap::-webkit-scrollbar {
+	display: none;
+}
+.phone .phone-activeapp .phone-activeapp-elem {
+	position: relative;
+
+	height: 80%;
+	width: 80%;
+	min-width: 80%;
+
+	opacity: .6;
+}
+.phone .phone-activeapp .phone-activeapp-elem-sel {
+	opacity: 1;
+}
+.phone .phone-activeapp .phone-activeapp-elem:first-child {
+	margin-left: 10%;
+}
+.phone .phone-activeapp .phone-activeapp-elem:last-child {
+	margin-right: 10%;
+}
+.phone .phone-activeapp .phone-activeapp-elem + .phone-activeapp-elem {
+	margin-left: 10%;
+}
+.phone .phone-activeapp .phone-activeapp-elem .phone-activeapp-elem-img {
+	position: absolute;
+
+	width: 30px;
+	height: 30px;
+
+	z-index: 5;
+
+	top: -15px;
+	left: 50%;
+
+	transform: translateX(-50%);
+}
+.phone .phone-activeapp .phone-activeapp-elem .phone-app {
+	position: relative;
+	border-radius: 4px;
+
+	overflow: hidden;
+}
+.phone .phone-activeapp .phone-activeapp-btn {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+}
+.phone .phone-activeapp .phone-activeapp-btn .btn {
+	background-color: white;
+	color: black;
+	border-color: transparent;
+
+	padding: 4px 8px;
+	font-size: 11px;
+}
+.phone .phone-activeapp .phone-activeapp-elem .phone-activeapp-elem-bg {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: transparent;
+	z-index: 5;
+
+	border-radius: 4px;
+}
+
+
+.phone .phone-nav {
+	position: absolute;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	padding: 10px 0;
+
+	bottom: 0;
+	left: 0;
+
+	z-index: 5;
+}
+.phone .phone-nav-bg {
+	background-color: #dbdbdb;
+}
+.phone .phone-nav svg {
+	margin: 0 25px;
+	font-size: 13px;
+
+	cursor: pointer;
+	color: white
+}
+.phone .phone-display-black .phone-nav svg {
+	color: #111;
+}
+.phone .phone-nav svg:first-child {
+	font-size: 18px;
+}
+
+
+.phone .phone-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: calc(100% - 30px);
+	padding: 5px 15px;
+
+	position: relative;
+	z-index: 5;
+}
+.phone .phone-header h1 {
+	font-size: 11px;
+	font-family: 'Avenir';
+
+	color: white;
+}
+.phone .phone-header svg {
+	color: white;	
+}
+.phone .phone-display-black .phone-header svg,
+.phone .phone-display-black .phone-header h1 {
+	color: black;
+}
+.phone .phone-display .phone-header-white svg,
+.phone .phone-display .phone-header-white h1 {
+	color: white;
+}
+.phone .phone-header svg + svg {
+	margin-left: 3px;
+}
+.phone .phone-header section {
+	display: flex;
+	align-items: center;
+}
+
+
+.phone .phone-saved-apps {
+	display: flex;
+	align-items: center;
+
+	width: calc(100% - 20px);
+	padding: 0 10px;
+
+	position: absolute;
+
+	bottom: 35px;
+	left: 10px;
+}
+.phone .phone-saved-apps .phone-appitem {
+	height: auto;
+}
+
+
+.phone .phone-appitem {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	width: 60px;
+	height: 60px;
+
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	transform: translateX(5px);
+}
+.phone .phone-appitem img {
+	width: 62%;
+	height: 62%;
+}
+.phone .phone-appitem h1 {
+	font-size: 11px;
+	color: white;
+
+	font-family: 'Avenir';
+	font-weight: 500;
+
+	white-space: nowrap;
+}
+.phone .phone-display-black .phone-appitem h1 {
+	color: black;
+}
+
+
+
+.phone .phone-avatar {
+	width: 40px;
+	min-width: 40px;
+	height: 40px;
+
+	overflow: hidden;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone .phone-avatar img {
+	width: 100%;
+	height: 100%;
+}
+.phone .phone-avatar-big {
+	width: 80px;
+	min-width: 80px;
+	height: 80px;
+}
+.phone .phone-avatar-min {
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+}
+
+
+.phone-app-B {
+	width: 100%;
+	min-width: 100%;
+	height: calc(100% - 25px - 38px);
+
+	background-color: white;
+
+	padding-top: 25px;
+	padding-bottom: 38px;
+
+	position: relative;
+}

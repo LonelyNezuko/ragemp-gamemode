@@ -1,0 +1,160 @@
+.choicechar {
+	position: absolute;
+
+	bottom: 50px;
+	left: 50%;
+
+	transform: translateX(-50%);
+
+	width: 80%;
+	color: white;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+
+.choicechar .choicechar-elem {
+	background-color: #333;
+	border: 2px solid transparent;
+
+	width: 270px;
+	border-radius: 8px;
+
+	overflow: hidden;
+}
+
+.choicechar .choicechar-elem .choicechar-elem-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 10px 20px;
+	margin-bottom: 5px;
+}
+.choicechar .choicechar-elem .choicechar-elem-header h1 {
+	display: flex;
+	flex-wrap: wrap;
+
+	font-family: 'Akrobat';
+	font-size: 22px;
+	font-weight: 500;
+}
+.choicechar .choicechar-elem .choicechar-elem-header h1 span {
+	width: 100%;
+	font-size: 11px;
+	opacity: .6;
+}
+.choicechar .choicechar-elem .choicechar-elem-header div {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transform: translateX(-10px);
+}
+.choicechar .choicechar-elem .choicechar-elem-header div svg {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	font-size: 37px;
+
+	opacity: .5;
+	color: #24ae7f;
+}
+.choicechar .choicechar-elem .choicechar-elem-header div h2 {
+	position: relative;
+	z-index: 5;
+
+	font-family: 'Druk Cyr';
+	font-size: 23px;
+}
+
+.choicechar .choicechar-elem .choicechar-elem-body {
+	padding: 0 20px;
+	overflow: hidden;
+}
+.choicechar .choicechar-elem .choicechar-elem-body h3 {
+	text-align: center;
+	font-size: 12px;
+	opacity: .6;
+
+	margin-top: 10px;
+}
+.choicechar .choicechar-elem .choicechar-elem-body .choicechar-elem-body-svg {
+	justify-content: center;
+	opacity: .6;
+}
+.choicechar .choicechar-elem .choicechar-elem-body .choicechar-elem-body-svg svg {
+	font-size: 50px;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section + section {
+	margin-top: 10px;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section div {
+	display: flex;
+	align-items: center;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section button {
+	width: 20px;
+	height: 20px;
+
+	border: 0;
+	border-radius: 4px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #555;
+	opacity: .6;
+
+	margin-right: 5px;
+	transform: translateY(1px);
+}
+.choicechar .choicechar-elem .choicechar-elem-body section button svg {
+	font-size: 12px;
+	color: white;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section:hover button {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+	opacity: 1;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section h2,
+.choicechar .choicechar-elem .choicechar-elem-body section h1 {
+	font-size: 12px;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section h1 {
+	opacity: .6;
+}
+.choicechar .choicechar-elem .choicechar-elem-body section h2 {
+	text-align: right;
+}
+
+.choicechar .choicechar-elem .choicechar-elem-footer {
+	margin-bottom: 15px;
+	margin-top: 10px;
+
+	width: calc(100% - 40px);
+	padding: 0 20px;
+}
+.choicechar .choicechar-elem .choicechar-elem-footer .btn {
+	width: 100%;
+
+	background-color: #444;
+	border-color: transparent;
+
+	padding: 11px 0;
+}
+.choicechar .choicechar-elem .choicechar-elem-footer .btn:hover {
+	background-image: linear-gradient( 143.3deg,  rgba(216,27,96,1) 33.1%, rgba(237,107,154,1) 74.9% );
+}

@@ -1,0 +1,76 @@
+.dialog {
+	position: absolute;
+	z-index: 1000;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	color: white;
+
+	border-radius: 4px;
+	min-width: 300px;
+	max-width: 600px;
+}
+
+.dialog .dialog-header {
+	padding: 15px 20px;
+	text-align: left;
+
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.dialog .dialog-btn {
+	padding: 15px 20px;
+	background-color: rgba(0, 0, 0, .6);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dialog .dialog-btn .btn {
+	margin: 0 30px;
+}
+.dialog .dialog-btn .btn:hover {
+	background-color: white;
+	border-color: white;
+
+	color: black;
+}
+
+.dialog .dialog-body {
+	padding: 15px 10px;
+	background-color: rgba(0, 0, 0, .6);
+
+	max-height: 250px;
+	overflow: auto;
+}
+
+.dialog .dialog-body-choice {
+
+}
+.dialog .dialog-body-choice section {
+	padding: 10px;
+	cursor: pointer;
+
+	transition: .3s;
+	border-radius: 4px;
+}
+.dialog .dialog-body-choice section:hover {
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.dialog .dialog-body-input {
+	padding: 0 10px;
+}
+.dialog .dialog-body-input h1 {
+	font-size: 13px;
+}
+.dialog .dialog-body-input input {
+	margin-top: 7px;
+	width: calc(100% - 24px);
+}
+
+.dialog .dialog-body-text {
+	padding: 0 10px;
+}
